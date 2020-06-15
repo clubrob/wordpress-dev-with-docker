@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  natmdbwsl:
+    image: mariadb:10.4
+    volumes:
+      - natm_data_wsl:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    restart: always
+    env_file:
+      - db.env
+
+  natmwebwsl:
+    depends_on:
+      - natmdbwsl
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: ./html
+        target: /var/www/html
+      - type: bind
+        source: ./uploads.ini
+        target: /usr/local/etc/php/conf.d/uploads.ini
+      - type: bind
+        source: ./.bashrc
+        target: /root/.bashrc
+    ports:
+      - "8080:80"
+    restart: always
+    env_file:
+      - wp.env
+
+volumes:
+  natm_data_wsl:
+    name: website_natm_data_wsl
