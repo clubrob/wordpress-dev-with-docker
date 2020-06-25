@@ -15,6 +15,9 @@ RUN apt-get install -y nodejs
 # Add Gulp globally
 RUN npm i -g gulp-cli
 
+# Install Git
+RUN apt-get install -y git
+
 # Cleanup
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

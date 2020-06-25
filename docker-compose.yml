@@ -27,6 +27,9 @@ services:
       - type: bind
         source: ./.bashrc
         target: /root/.bashrc
+      - type: bind
+        source: ./.ssh
+        target: /root/.ssh
     ports:
       - "8080:80"
     restart: always
