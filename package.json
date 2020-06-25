@@ -4,7 +4,8 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "serve": "gulp serve"
+    "serve:themes": "gulp serveThemes",
+    "serve:plugins": "gulp servePlugins"
   },
   "keywords": [],
   "author": "",
