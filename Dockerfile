@@ -13,7 +13,7 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs
 
 # Add Gulp globally
-RUN npm i -g gulp-cli
+RUN npm i -g gulp-cli npm
 
 # Install Git
 RUN apt-get install -y git
