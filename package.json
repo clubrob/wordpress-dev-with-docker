@@ -11,8 +11,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "dotenv": "^8.2.0",
+    "browser-sync": "^2.27.5",
+    "dotenv": "^8.6.0",
     "gulp": "^4.0.2"
   }
 }
