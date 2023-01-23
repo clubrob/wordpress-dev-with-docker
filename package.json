@@ -2,17 +2,14 @@
   "name": "wordpress-theming-with-docker",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
   "scripts": {
-    "serve:themes": "gulp serveThemes",
-    "serve:plugins": "gulp servePlugins"
+    "serve": "browser-sync start --port=5500 --proxy='localhost:8080' --files='./html/wp-content/themes/lls-v1/theme.css,./html/wp-content/themes/lls-v1/js/scripts.js,./html/**/*.php'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.27.5",
-    "dotenv": "^8.6.0",
-    "gulp": "^4.0.2"
-  }
+    "browser-sync": "^2.27.11"
+  },
+  "packageManager": "yarn@3.3.1"
 }
