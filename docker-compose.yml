@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  natmdbwsl:
+  wpdbwsl:
     image: mariadb:10.4
     volumes:
       - natm_data_wsl:/var/lib/mysql
@@ -11,9 +11,9 @@ services:
     env_file:
       - db.env
 
-  natmwebwsl:
+  wpwebwsl:
     depends_on:
-      - natmdbwsl
+      - wpdbwsl
     build:
       context: .
       dockerfile: Dockerfile
@@ -37,5 +37,5 @@ services:
       - wp.env
 
 volumes:
-  natm_data_wsl:
-    name: website_natm_data_wsl
+  wp_data_wsl:
+    name: website_wp_data_wsl

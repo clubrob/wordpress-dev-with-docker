@@ -9,11 +9,8 @@ COPY wp-su.sh /bin/wp
 RUN chmod +x /bin/wp-cli.phar /bin/wp
 
 # Add Node for theme build tools
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
-RUN apt-get install -y nodejs
-
-# Add Gulp globally
-RUN npm i -g gulp-cli npm
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+RUN sudo apt-get install -y nodejs
 
 # Install Git
 RUN apt-get install -y git
