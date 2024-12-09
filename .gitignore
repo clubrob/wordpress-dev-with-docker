@@ -1,12 +1,4 @@
-node_modules
-*.env
-html
-.ssh
-js
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+.env
+nginx/default.conf
+nginx/certs/*.*
+src/
