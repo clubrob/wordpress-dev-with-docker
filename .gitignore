@@ -1,4 +1,3 @@
 .env
-nginx/default.conf
-nginx/certs/*.*
+wordpress/certs/*.*
 src/

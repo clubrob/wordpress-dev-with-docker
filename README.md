@@ -1,8 +1,5 @@
 # Local Wordpress Development with Docker and SSL
 
-Followed these two videos to update my Docker workflow for Wordpress.
+Followed this tutorial after fighting with nginx and cross-container permissions for two days. Much simpler. Good ol' apache2:
 
-[Docker Setup for Local WordPress Development](https://youtu.be/GG2k-La5t3o?si=31JjwQ1R7zidgawm)
-
-[Adding SSL Support to Your WordPress Docker Setup!](https://youtu.be/HH4s3x1PiA4?si=UYJM1Yp20I5nZK2f)
-
+[A simple setup for self-hosted WordPress on Docker with SSL]([Url](https://hackmd.io/@linnil1/H1p25uxFU))
