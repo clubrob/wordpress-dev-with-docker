@@ -1,5 +1,7 @@
 FROM wordpress:latest
 
+COPY ./wordpress/wordpress.ini $PHP_INI_DIR/conf.d/
+
 # Add sudo in order to run wp-cli as the www-data user
 RUN apt-get update && apt-get install -y sudo less
 
